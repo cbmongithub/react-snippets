@@ -15,7 +15,7 @@ export const Header = () => {
 
       <header className='container mx-auto flex max-w-5xl items-center justify-between px-4 py-8'>
         <Link href='/'>
-          <div className='text-xl text-neutral-50'>ui-snippets<span className="absolute text-sm text-rose-500">twv4</span></div>
+          <div className='text-xl text-neutral-50'>ui-snippets<span className="absolute text-sm text-blue-500">twv4</span></div>
         </Link>
         <nav className='flex gap-6'>
           <Link
