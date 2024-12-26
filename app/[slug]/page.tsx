@@ -1,16 +1,10 @@
-import { promisify } from 'util';
-import fs from 'fs';
-import path from 'path';
+import { promisify } from 'node:util';
+import fs from 'node:fs';
+import path from 'node:path';
 import CodeBlock from '@/components/app/CodeBlock';
 import { COMPONENTS } from '@/data/components';
 import ComponentPlayground from '@/components/app/ComponentPlayground';
 
-type SegmentParams<T extends Object = any> = T extends Record<string, any>
-  ? { [K in keyof T]: T[K] extends string ? string | string[] | undefined : never }
-  : T;
-export interface PageProps {
-  params?: Promise<SegmentParams>
-}
 
 async function readFilePath(filePath: string) {
   const readFile = promisify(fs.readFile);
@@ -32,10 +26,12 @@ export async function generateStaticParams() {
 
 export const dynamicParams = false;
 
-const ComponentPage = async ({ params }: PageProps) => {
-  const param = await params;
+// https://stackoverflow.com/questions/79124951/type-error-in-next-js-route-type-params-id-string-does-not-satis
+
+const ComponentPage = async ({ params }: { params: Promise<{ slug: string[] }> }) => {
+  const { slug } = await params;
   const currentComponentData = COMPONENTS.find(
-    (component) => component.slug === param.slug
+    (component) => component.slug === slug[0]
   );
 
   if (!currentComponentData) {
@@ -61,7 +57,7 @@ const ComponentPage = async ({ params }: PageProps) => {
         <div className='mt-8'>
           <CodeBlock code={code} lang='tsx' />
         </div>
-        {Boolean(twConfig) ? (
+        {twConfig && (
           <div className='mt-8'>
             <CodeBlock
               code={twConfig}
@@ -69,7 +65,7 @@ const ComponentPage = async ({ params }: PageProps) => {
               fileName='tailwind.config.js'
             />
           </div>
-        ) : null}
+        )}
       </div>
     </div>
   );
