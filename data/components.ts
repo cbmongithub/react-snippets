@@ -7,6 +7,7 @@ import ButtonHoverGradient from '@/components/lab/button/ButtonHoverGradient';
 import ButtonBackgroundSpotlight from '@/components/lab/button/ButtonBackgroundSpotlight';
 import ButtonRotatingBackgroundGradient from '@/components/lab/button/ButtonRotatingBackgroundGradient';
 import ButtonShadowGradient from '@/components/lab/button/ButtonShadowGradient';
+import ButtonSlideInLeft from '@/components/lab/button/ButtonSlideInLeft';
 import InputGradientBorder from '@/components/lab/input/InputGradientBorder';
 import InputSpotlightBorder from '@/components/lab/input/InputSpotlightBorder';
 import InputPulseBorder from '@/components/lab/input/InputPulseBorder';
@@ -60,6 +61,58 @@ const TWCONFIG = {
   },
 };
 
+const CSS = {
+  ['text-gradient']: `
+  @theme {
+  --animate-text-gradient: text-gradient 1.5s linear infinite;
+
+  @keyframes text-gradient {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 200% center;
+    }
+  }
+}
+`,
+  ['background-shine']: `
+  @theme {
+  --animate-background-shine: background-shine 2s linear infinite;
+
+  @keyframes background-shine {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -200% 0;
+    }
+  }
+}
+`,
+  ['pulse-slow']: `
+  @theme {
+  --animate-pulse-slow: pulse-slow 6s infinite cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  `,
+  ['border-width']: `
+    @theme {
+  --animate-border-width: border-width 3s infinite alternate;
+
+  @keyframes border-width {
+    from {
+      width: 10px;
+      opacity: 0;
+    }
+    to {
+      width: 100px;
+      opacity: 1;
+    }
+  }
+}
+`,
+};
+
 export const COMPONENTS = [
   {
     name: 'Text Gradient',
@@ -73,6 +126,7 @@ export const COMPONENTS = [
     slug: 'text-animated-gradient',
     type: 'text',
     twConfig: TWCONFIG['text-gradient'],
+    css: CSS['text-gradient'],
   },
   {
     name: 'Text Shine',
@@ -80,6 +134,7 @@ export const COMPONENTS = [
     slug: 'text-shine',
     type: 'text',
     twConfig: TWCONFIG['background-shine'],
+    css: CSS['background-shine'],
   },
   {
     name: 'Button Background Shine',
@@ -87,6 +142,7 @@ export const COMPONENTS = [
     slug: 'button-background-shine',
     type: 'button',
     twConfig: TWCONFIG['background-shine'],
+    css: CSS['background-shine'],
   },
   {
     name: 'Button Gradient',
@@ -119,6 +175,12 @@ export const COMPONENTS = [
     type: 'button',
   },
   {
+    name: 'Button Slide In Left',
+    component: ButtonSlideInLeft,
+    slug: 'button-slide-in-left',
+    type: 'button',
+  },
+  {
     name: 'Input Gradient Border',
     component: InputGradientBorder,
     slug: 'input-gradient-border',
@@ -136,6 +198,7 @@ export const COMPONENTS = [
     slug: 'input-pulse-border',
     type: 'input',
     twConfig: TWCONFIG['border-width'],
+    css: CSS['border-width'],
   },
   {
     name: 'Badge Animated Gradient Border',
@@ -149,6 +212,7 @@ export const COMPONENTS = [
     slug: 'badge-shine',
     type: 'badge',
     twConfig: TWCONFIG['background-shine'],
+    css: CSS['background-shine'],
   },
   {
     name: 'Badge Text Gradient',
@@ -174,6 +238,7 @@ export const COMPONENTS = [
     slug: 'card-pulse-border',
     type: 'card',
     twConfig: TWCONFIG['border-width'],
+    css: CSS['border-width'],
   },
   {
     name: 'Card Tilt',

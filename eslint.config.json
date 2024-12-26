@@ -12,4 +12,5 @@ const eslintConfig = [
     plugins: ['prettier'],
   }),
 ]
+
 export default eslintConfig

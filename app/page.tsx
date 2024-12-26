@@ -14,16 +14,16 @@ const CardComponent: React.FC<CardComponentProps> = ({
   name,
 }) => {
   return (
-    <div className='relative flex items-center justify-center rounded-xl border border-gray-900 bg-gray-950/60 px-8 py-32'>
+    <div className='relative flex items-center justify-center rounded-xl border border-gray-900 bg-black px-8 py-32'>
       <Link
         href={`/${slug}`}
-        className='absolute left-5 top-4 text-sm text-gray-400'
+        className='absolute left-5 top-4 text-sm text-gray-300'
       >
         {name}
       </Link>
       <div className='absolute right-5 top-3'>
         <Link href={`/${slug}`}>
-          <ArrowRightIcon className='h-5 w-5 text-gray-400' />
+          <ArrowRightIcon className='h-5 w-5 text-gray-300' />
         </Link>
       </div>
       <div className='z-0'>{children}</div>
@@ -37,12 +37,11 @@ export default function Home() {
       <section>
         <div className='relative z-0 mx-auto max-w-3xl pb-24 pt-12 text-center'>
           <div>
-            <h1 className='mb-8 bg-gradient-to-t from-[#6d6d6d] to-[#f4f4f4] bg-clip-text text-4xl text-transparent md:text-5xl'>
-              Collection of dark mode components and effects
+            <h1 className='mb-8 text-gray-100 text-4xl md:text-5xl'>
+              Dark mode components
             </h1>
-            <p className='text-xl text-gray-500'>
-              Crafted with{' '}
-              <span className='text-gray-50'>React and Tailwind CSS</span>.
+            <p className='text-xl text-gray-400'>Crafted with
+              <span className='text-gray-100'>&nbsp;Tailwind and React</span>
             </p>
           </div>
         </div>

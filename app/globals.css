@@ -1,38 +1,37 @@
 @import "tailwindcss";
 
 @theme {
---animate-gradient: text-gradient 1.5s linear infinite;
---animate-background-shine: background-shine 2s linear infinite;
---animate-pulse-slow: pulse-slow 6s infinite cubic-bezier(0.4, 0, 0.6, 1);
---animate-border-width: border-width 3s infinite alternate;
+  --animate-gradient: text-gradient 1.5s linear infinite;
+  --animate-background-shine: background-shine 2s linear infinite;
+  --animate-pulse-slow: pulse-slow 6s infinite cubic-bezier(0.4, 0, 0.6, 1);
+  --animate-border-width: border-width 3s infinite alternate;
 
-@keyframes text-gradient {
+  @keyframes text-gradient {
     from {
-        background-position: 0 0;
+      background-position: 0 0;
     }
     to {
-        background-position: 200% center;
+      background-position: 200% center;
     }
-}
+  }
 
-@keyframes background-shine {
+  @keyframes background-shine {
     from {
-        background-position: 0 0;
+      background-position: 0 0;
     }
     to {
-        background-position: -200% 0;
+      background-position: -200% 0;
     }
-}
+  }
 
-@keyframes border-width {
+  @keyframes border-width {
     from {
-        width: 10px;
-        opacity: 0;
+      width: 10px;
+      opacity: 0;
     }
     to {
-        width: 100px;
-        opacity: 1;
+      width: 100px;
+      opacity: 1;
     }
+  }
 }
-}
-
