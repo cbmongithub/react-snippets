@@ -7,7 +7,6 @@ import ButtonHoverGradient from '@/components/lab/button/ButtonHoverGradient';
 import ButtonBackgroundSpotlight from '@/components/lab/button/ButtonBackgroundSpotlight';
 import ButtonRotatingBackgroundGradient from '@/components/lab/button/ButtonRotatingBackgroundGradient';
 import ButtonShadowGradient from '@/components/lab/button/ButtonShadowGradient';
-import ButtonSlideInLeft from '@/components/lab/button/ButtonSlideInLeft';
 import InputGradientBorder from '@/components/lab/input/InputGradientBorder';
 import InputSpotlightBorder from '@/components/lab/input/InputSpotlightBorder';
 import InputPulseBorder from '@/components/lab/input/InputPulseBorder';
@@ -18,48 +17,6 @@ import CardAnimatedBorderGradient from '@/components/lab/card/CardAnimatedBorder
 import CardSpotlight from '@/components/lab/card/CardSpotlight';
 import CardPulseBorder from '@/components/lab/card/CardPulseBorder';
 import CardTilt from '@/components/lab/card/CardTilt';
-
-const TWCONFIG = {
-  ['text-gradient']: {
-    animation: {
-      'text-gradient': 'text-gradient 1.5s linear infinite',
-    },
-    keyframes: {
-      'text-gradient': {
-        to: {
-          backgroundPosition: '200% center',
-        },
-      },
-    },
-  },
-  ['background-shine']: {
-    animation: {
-      'background-shine': 'background-shine 2s linear infinite',
-    },
-    keyframes: {
-      'background-shine': {
-        from: { backgroundPosition: '0 0' },
-        to: { backgroundPosition: '-200% 0' },
-      },
-    },
-  },
-  ['pulse-slow']: {
-    animation: {
-      'pulse-slow': 'pulse 6s infinite cubic-bezier(0.4, 0, 0.6, 1)',
-    },
-  },
-  ['border-width']: {
-    animation: {
-      'border-width': 'border-width 3s infinite alternate',
-    },
-    keyframes: {
-      'border-width': {
-        from: { width: '10px', opacity: '0' },
-        to: { width: '100px', opacity: '1' },
-      },
-    },
-  },
-};
 
 const CSS = {
   ['text-gradient']: `
@@ -113,6 +70,14 @@ const CSS = {
 `,
 };
 
+export type ComponentsProps = {
+  name: string;
+  component: React.FC;
+  slug: string;
+  type: string;
+  css: string | undefined;
+};
+
 export const COMPONENTS = [
   {
     name: 'Text Gradient',
@@ -125,7 +90,6 @@ export const COMPONENTS = [
     component: TextAnimatedGradient,
     slug: 'text-animated-gradient',
     type: 'text',
-    twConfig: TWCONFIG['text-gradient'],
     css: CSS['text-gradient'],
   },
   {
@@ -133,7 +97,6 @@ export const COMPONENTS = [
     component: TextShine,
     slug: 'text-shine',
     type: 'text',
-    twConfig: TWCONFIG['background-shine'],
     css: CSS['background-shine'],
   },
   {
@@ -141,7 +104,6 @@ export const COMPONENTS = [
     component: ButtonBackgroundShine,
     slug: 'button-background-shine',
     type: 'button',
-    twConfig: TWCONFIG['background-shine'],
     css: CSS['background-shine'],
   },
   {
@@ -175,12 +137,6 @@ export const COMPONENTS = [
     type: 'button',
   },
   {
-    name: 'Button Slide In Left',
-    component: ButtonSlideInLeft,
-    slug: 'button-slide-in-left',
-    type: 'button',
-  },
-  {
     name: 'Input Gradient Border',
     component: InputGradientBorder,
     slug: 'input-gradient-border',
@@ -197,7 +153,6 @@ export const COMPONENTS = [
     component: InputPulseBorder,
     slug: 'input-pulse-border',
     type: 'input',
-    twConfig: TWCONFIG['border-width'],
     css: CSS['border-width'],
   },
   {
@@ -211,7 +166,6 @@ export const COMPONENTS = [
     component: BadgeShine,
     slug: 'badge-shine',
     type: 'badge',
-    twConfig: TWCONFIG['background-shine'],
     css: CSS['background-shine'],
   },
   {
@@ -237,7 +191,6 @@ export const COMPONENTS = [
     component: CardPulseBorder,
     slug: 'card-pulse-border',
     type: 'card',
-    twConfig: TWCONFIG['border-width'],
     css: CSS['border-width'],
   },
   {
