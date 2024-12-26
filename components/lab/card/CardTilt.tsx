@@ -3,7 +3,7 @@ import { useState, MouseEvent, useCallback } from 'react';
 
 function throttle<T extends (...args: any[]) => any>(
   func: T,
-  delay: number
+  delay: number,
 ): (...args: Parameters<T>) => void {
   let lastCall = 0;
   return (...args: Parameters<T>) => {
@@ -32,7 +32,7 @@ const CardTilt = () => {
 
       setRotate({ x: rotateX, y: rotateY });
     }, 100),
-    []
+    [setRotate],
   );
 
   const onMouseLeave = () => {

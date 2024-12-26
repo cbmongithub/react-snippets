@@ -13,7 +13,7 @@ const badgeCva = cva(
     defaultVariants: {
       variant: 'primary',
     },
-  }
+  },
 );
 
 type BadgeProps = React.HTMLAttributes<HTMLDivElement> &

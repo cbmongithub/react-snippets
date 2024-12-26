@@ -13,7 +13,7 @@ const buttonCva = cva(
     defaultVariants: {
       variant: 'primary',
     },
-  }
+  },
 );
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &

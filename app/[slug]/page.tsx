@@ -5,12 +5,11 @@ import CodeBlock from '@/components/app/CodeBlock';
 import { COMPONENTS } from '@/data/components';
 import ComponentPlayground from '@/components/app/ComponentPlayground';
 
-
 async function readFilePath(filePath: string) {
   const readFile = promisify(fs.readFile);
   const fileContent = await readFile(
     path.join(process.cwd(), filePath),
-    'utf8'
+    'utf8',
   );
 
   return fileContent;
@@ -28,10 +27,14 @@ export const dynamicParams = false;
 
 // https://stackoverflow.com/questions/79124951/type-error-in-next-js-route-type-params-id-string-does-not-satis
 
-const ComponentPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
+const ComponentPage = async ({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) => {
   const param = await params;
   const currentComponentData = COMPONENTS.find(
-    (component) => component.slug === param.slug
+    (component) => component.slug === param.slug,
   );
 
   if (!currentComponentData) {

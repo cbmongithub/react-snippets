@@ -8,7 +8,7 @@ const componentPlaygroundCva = cva(
         true: 'flex items-center justify-center',
       },
     },
-  }
+  },
 );
 
 export type ComponentPlaygroundProps =
