@@ -1,4 +1,5 @@
 import { highlight } from '@/lib/shiki';
+import type { JSX } from 'react';
 import { Lang } from 'shiki';
 
 type CodeProps = {

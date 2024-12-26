@@ -5,6 +5,13 @@ import CodeBlock from '@/components/app/CodeBlock';
 import { COMPONENTS } from '@/data/components';
 import ComponentPlayground from '@/components/app/ComponentPlayground';
 
+type SegmentParams<T extends Object = any> = T extends Record<string, any>
+  ? { [K in keyof T]: T[K] extends string ? string | string[] | undefined : never }
+  : T;
+export interface PageProps {
+  params?: Promise<SegmentParams>
+}
+
 async function readFilePath(filePath: string) {
   const readFile = promisify(fs.readFile);
   const fileContent = await readFile(
@@ -25,9 +32,10 @@ export async function generateStaticParams() {
 
 export const dynamicParams = false;
 
-const ComponentPage = async ({ params }: { params: { slug: string } }) => {
+const ComponentPage = async ({ params }: PageProps) => {
+  const param = await params;
   const currentComponentData = COMPONENTS.find(
-    (component) => component.slug === params.slug
+    (component) => component.slug === param.slug
   );
 
   if (!currentComponentData) {
