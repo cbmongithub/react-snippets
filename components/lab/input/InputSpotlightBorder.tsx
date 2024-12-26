@@ -47,13 +47,13 @@ const InputSpotlightBorder = () => {
           placeholder='Enter Text Here'
           type='email'
           name='email'
-          className='h-12 w-full cursor-default rounded-md border border-neutral-800 bg-black p-3.5 text-neutral-100 transition-colors duration-500 placeholder:select-none  placeholder:text-neutral-500 focus:border-[#8678F9] focus:outline-none'
+          className='h-12 w-full cursor-default rounded-md border border-neutral-800 bg-black p-3.5 text-neutral-100 transition-colors duration-500 placeholder:select-none  placeholder:text-neutral-500 focus:border-blue-500 focus:outline-none'
         />
         <input
           ref={divRef}
           disabled
           style={{
-            border: '1px solid #8678F9',
+            border: '1px solid #2b7fff',
             opacity,
             WebkitMaskImage: `radial-gradient(30% 30px at ${position.x}px ${position.y}px, black 45%, transparent)`,
           }}

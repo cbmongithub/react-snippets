@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --animate-gradient: text-gradient 1.5s linear infinite;
+  --animate-text-gradient: text-gradient 1.5s linear infinite;
   --animate-background-shine: background-shine 2s linear infinite;
   --animate-pulse-slow: pulse-slow 6s infinite cubic-bezier(0.4, 0, 0.6, 1);
   --animate-border-width: border-width 3s infinite alternate;
