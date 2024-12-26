@@ -66,7 +66,7 @@ const ComponentPage = async ({
             <CodeBlock
               code={twConfig}
               lang='tsx'
-              fileName='tailwind.config.js'
+              title='tailwind.config.js'
             />
           </div>
         )}
@@ -75,7 +75,7 @@ const ComponentPage = async ({
             <CodeBlock
               code={twConfig}
               lang='css'
-              fileName='globals.css'
+              title='globals.css'
             />
           </div>
         )}
