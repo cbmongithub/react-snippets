@@ -47,7 +47,6 @@ const ComponentPage = async ({
 
   const code = await readFilePath(filePath);
   const twConfig = JSON.stringify(currentComponentData?.twConfig, null, 2);
-  const css = JSON.parse(JSON.stringify(currentComponentData?.css, null, 2));
 
   return (
     <div className='mt-10 pb-32'>
@@ -67,15 +66,6 @@ const ComponentPage = async ({
               code={twConfig}
               lang='tsx'
               title='tailwind.config.js'
-            />
-          </div>
-        )}
-        {css && (
-          <div className='mt-8'>
-            <CodeBlock
-              code={css}
-              lang='css'
-              title='globals.css'
             />
           </div>
         )}
