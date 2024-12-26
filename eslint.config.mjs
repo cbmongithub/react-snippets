@@ -9,7 +9,7 @@ const eslintConfig = [
       "prettier/prettier": "error",
       "react-hooks/exhaustive-deps": "off",
     },
-    plugins: ['prettier', 'tailwindcss'],
+    plugins: ['prettier'],
   }),
 ]
 export default eslintConfig
