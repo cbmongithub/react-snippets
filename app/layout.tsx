@@ -28,13 +28,13 @@ export default function RootLayout({
           </main>
           <footer>
             <div className='flex items-center justify-center py-8'>
-              <span className='text-sm text-gray-400'>
+              <span className='text-sm text-neutral-400'>
                 By
                 <a
                   href='https://twitter.com/Ibelick'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='ml-1 text-gray-50'
+                  className='ml-1 text-neutral-50'
                 >
                   @Ibelick
                 </a>
@@ -43,7 +43,7 @@ export default function RootLayout({
                   href='https://twitter.com/cbmonx'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='ml-1 text-gray-50'
+                  className='ml-1 text-neutral-50'
                 >
                   @cbmonx
                 </a>

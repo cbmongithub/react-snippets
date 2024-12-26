@@ -51,7 +51,7 @@ const ComponentPage = async ({
 
   return (
     <div className='mt-10 pb-32'>
-      <h1 className='text-md mb-2 font-light text-gray-400'>
+      <h1 className='text-md mb-2 font-light text-neutral-400'>
         {currentComponentData.name}
       </h1>
       <div className='w-full'>
