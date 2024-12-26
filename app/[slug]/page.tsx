@@ -28,10 +28,10 @@ export const dynamicParams = false;
 
 // https://stackoverflow.com/questions/79124951/type-error-in-next-js-route-type-params-id-string-does-not-satis
 
-const ComponentPage = async ({ params }: { params: Promise<{ slug: string[] }> }) => {
-  const { slug } = await params;
+const ComponentPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const param = await params;
   const currentComponentData = COMPONENTS.find(
-    (component) => component.slug === slug[0]
+    (component) => component.slug === param.slug
   );
 
   if (!currentComponentData) {
