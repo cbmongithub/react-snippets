@@ -7,6 +7,7 @@ import ButtonHoverGradient from '@/components/lab/button/ButtonHoverGradient';
 import ButtonBackgroundSpotlight from '@/components/lab/button/ButtonBackgroundSpotlight';
 import ButtonRotatingBackgroundGradient from '@/components/lab/button/ButtonRotatingBackgroundGradient';
 import ButtonShadowGradient from '@/components/lab/button/ButtonShadowGradient';
+import ButtonToggle from '@/components/lab/button/ButtonToggle';
 import InputGradientBorder from '@/components/lab/input/InputGradientBorder';
 import InputSpotlightBorder from '@/components/lab/input/InputSpotlightBorder';
 import InputPulseBorder from '@/components/lab/input/InputPulseBorder';
@@ -14,6 +15,7 @@ import BadgeAnimatedGradientBorder from '@/components/lab/badge/BadgeAnimatedGra
 import BadgeShine from '@/components/lab/badge/BadgeShine';
 import BadgeTextGradient from '@/components/lab/badge/BadgeTextGradient';
 import CardAnimatedBorderGradient from '@/components/lab/card/CardAnimatedBorderGradient';
+import CardImage from '@/components/lab/card/CardImage';
 import CardSpotlight from '@/components/lab/card/CardSpotlight';
 import CardPulseBorder from '@/components/lab/card/CardPulseBorder';
 import CardTilt from '@/components/lab/card/CardTilt';
@@ -145,9 +147,24 @@ export const COMPONENTS = [
     categories: ['Buttons', 'All'],
   },
   {
+    name: 'Button Toggle',
+    component: ButtonToggle,
+    slug: 'button-toggle',
+    type: 'button',
+    categories: ['Buttons', 'All'],
+  },
+
+  {
     name: 'Card Animated Border Gradient',
     component: CardAnimatedBorderGradient,
     slug: 'card-animated-border-gradient',
+    type: 'card',
+    categories: ['Cards', 'All'],
+  },
+  {
+    name: 'Card Image',
+    component: CardImage,
+    slug: 'card-image',
     type: 'card',
     categories: ['Cards', 'All'],
   },
