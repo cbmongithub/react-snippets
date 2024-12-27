@@ -15,7 +15,7 @@ import BadgeAnimatedGradientBorder from '@/components/lab/badge/BadgeAnimatedGra
 import BadgeShine from '@/components/lab/badge/BadgeShine';
 import BadgeTextGradient from '@/components/lab/badge/BadgeTextGradient';
 import CardAnimatedBorderGradient from '@/components/lab/card/CardAnimatedBorderGradient';
-import CardImage from '@/components/lab/card/CardImage';
+import CardSpotlightImage from '@/components/lab/card/CardSpotlightImage';
 import CardSpotlight from '@/components/lab/card/CardSpotlight';
 import CardPulseBorder from '@/components/lab/card/CardPulseBorder';
 import CardTilt from '@/components/lab/card/CardTilt';
@@ -162,9 +162,9 @@ export const COMPONENTS = [
     categories: ['Cards', 'All'],
   },
   {
-    name: 'Card Image',
-    component: CardImage,
-    slug: 'card-image',
+    name: 'Card Spotlight Image',
+    component: CardSpotlightImage,
+    slug: 'card-spotlight-image',
     type: 'card',
     categories: ['Cards', 'All'],
   },
