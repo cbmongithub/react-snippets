@@ -64,7 +64,7 @@ export const CardSpotlight = ({
         }}
       />
       {children ? children : (
-        <p className='text-sm text-neutral-200'>Card Content</p>
+        <p className='z-30 text-sm text-neutral-200'>Card Content</p>
       )}
     </div>
   );
