@@ -4,6 +4,7 @@ import path from 'node:path';
 import CodeBlock from '@/components/app/CodeBlock';
 import { COMPONENTS } from '@/data/components';
 import ComponentPlayground from '@/components/app/ComponentPlayground';
+import { BackButton } from '@/components/app/BackButton';
 
 async function readFilePath(filePath: string) {
   const readFile = promisify(fs.readFile);
@@ -48,10 +49,13 @@ const ComponentPage = async ({
   const code = await readFilePath(filePath);
   const css = JSON.stringify(currentComponentData?.css, null, 2);
   return (
-    <div className='mt-10 pb-32'>
-      <h1 className='text-md mb-2 font-light text-neutral-400'>
+    <div className='mt-10 pb-16 space-y-8'>
+      <div className='flex flex-row justify-between items-center'>
+        <BackButton />
+        <h1 className='text-md font-light text-neutral-400'>
         {currentComponentData.name}
       </h1>
+      </div>
       <div className='w-full'>
         <ComponentPlayground isCentered>
           <currentComponentData.component />
