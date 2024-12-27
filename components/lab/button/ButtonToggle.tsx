@@ -9,11 +9,11 @@ const ButtonToggle = () => {
 
     return (
         <button
-            className={`flex ${isOn ? "justify-start" : "justify-end"} items-center w-[50px] h-[25px] border border-neutral-900 bg-gradient-to-t from-blue-500 from-0% to-neutral-100 rounded-full cursor-pointer`}
+            className={`flex items-center ${isOn ? "justify-start" : "justify-end"} w-24 h-12 border border-neutral-900 bg-gradient-to-t from-blue-500 from-0% to-neutral-100 rounded-full cursor-pointer`}
             onClick={toggleSwitch}
         >
             <motion.div
-                className="size-6 inset-shadow-inner rounded-full bg-blue-500"
+                className="size-12 inset-shadow-inner rounded-full bg-blue-500"
                 layout
                 transition={{
                     type: "spring",
