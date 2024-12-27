@@ -7,6 +7,7 @@ import ButtonHoverGradient from '@/components/lab/button/ButtonHoverGradient';
 import ButtonBackgroundSpotlight from '@/components/lab/button/ButtonBackgroundSpotlight';
 import ButtonRotatingBackgroundGradient from '@/components/lab/button/ButtonRotatingBackgroundGradient';
 import ButtonShadowGradient from '@/components/lab/button/ButtonShadowGradient';
+import ButtonRipple from '@/components/lab/button/ButtonRipple';
 import ButtonToggle from '@/components/lab/button/ButtonToggle';
 import InputGradientBorder from '@/components/lab/input/InputGradientBorder';
 import InputSpotlightBorder from '@/components/lab/input/InputSpotlightBorder';
@@ -15,7 +16,7 @@ import BadgeAnimatedGradientBorder from '@/components/lab/badge/BadgeAnimatedGra
 import BadgeShine from '@/components/lab/badge/BadgeShine';
 import BadgeTextGradient from '@/components/lab/badge/BadgeTextGradient';
 import CardAnimatedBorderGradient from '@/components/lab/card/CardAnimatedBorderGradient';
-import CardImage from '@/components/lab/card/CardImage';
+import CardSpotlightImage from '@/components/lab/card/CardSpotlightImage';
 import CardSpotlight from '@/components/lab/card/CardSpotlight';
 import CardPulseBorder from '@/components/lab/card/CardPulseBorder';
 import CardTilt from '@/components/lab/card/CardTilt';
@@ -140,6 +141,13 @@ export const COMPONENTS = [
     categories: ['Buttons', 'All'],
   },
   {
+    name: 'Button Ripple',
+    component: ButtonRipple,
+    slug: 'button-ripple',
+    type: 'button',
+    categories: ['Buttons', 'All'],
+  },
+  {
     name: 'Button Shadow Gradient',
     component: ButtonShadowGradient,
     slug: 'button-shadow-gradient',
@@ -162,9 +170,9 @@ export const COMPONENTS = [
     categories: ['Cards', 'All'],
   },
   {
-    name: 'Card Image',
-    component: CardImage,
-    slug: 'card-image',
+    name: 'Card Spotlight Image',
+    component: CardSpotlightImage,
+    slug: 'card-spotlight-image',
     type: 'card',
     categories: ['Cards', 'All'],
   },
