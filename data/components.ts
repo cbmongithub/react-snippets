@@ -7,6 +7,7 @@ import ButtonHoverGradient from '@/components/lab/button/ButtonHoverGradient';
 import ButtonBackgroundSpotlight from '@/components/lab/button/ButtonBackgroundSpotlight';
 import ButtonRotatingBackgroundGradient from '@/components/lab/button/ButtonRotatingBackgroundGradient';
 import ButtonShadowGradient from '@/components/lab/button/ButtonShadowGradient';
+import ButtonRipple from '@/components/lab/button/ButtonRipple';
 import ButtonToggle from '@/components/lab/button/ButtonToggle';
 import InputGradientBorder from '@/components/lab/input/InputGradientBorder';
 import InputSpotlightBorder from '@/components/lab/input/InputSpotlightBorder';
@@ -136,6 +137,13 @@ export const COMPONENTS = [
     name: 'Button Rotating Background Gradient',
     component: ButtonRotatingBackgroundGradient,
     slug: 'button-rotating-background-gradient',
+    type: 'button',
+    categories: ['Buttons', 'All'],
+  },
+  {
+    name: 'Button Ripple',
+    component: ButtonRipple,
+    slug: 'button-ripple',
     type: 'button',
     categories: ['Buttons', 'All'],
   },

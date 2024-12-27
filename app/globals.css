@@ -5,7 +5,7 @@
   --animate-background-shine: background-shine 2s linear infinite;
   --animate-pulse-slow: pulse-slow 6s infinite cubic-bezier(0.4, 0, 0.6, 1);
   --animate-border-width: border-width 3s infinite alternate;
-
+  --animate-ripple: ripple 0.6s linear;
   @keyframes text-gradient {
     from {
       background-position: 0 0;
@@ -32,6 +32,13 @@
     to {
       width: 100px;
       opacity: 1;
+    }
+  }
+
+  @keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
     }
   }
 }
