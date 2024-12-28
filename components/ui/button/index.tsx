@@ -26,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   return (
-    <button {...props} className={buttonCva({ variant, className })}>
+    <button type='button' {...props} className={buttonCva({ variant, className })}>
       {children}
     </button>
   );

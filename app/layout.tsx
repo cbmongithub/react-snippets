@@ -2,7 +2,7 @@ import './globals.css';
 import { Inter } from 'next/font/google';
 import Header from './header';
 import { METADATA } from '@/data/metadata';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -14,10 +14,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(METADATA.url),
   description: METADATA.description,
   keywords: [
-    "Next.js v15",
-    "Next.js 15 template",
-    "Tailwind CSS v4",
-    "Tailwind v4 template",
+    "Next.js v15 ui snippets",
+    "Next.js 15 snippets",
+    "Tailwind CSS v4 snippets",
+    "Tailwind v4 snippets",
   ],
   authors: [
     {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/icon",
+    shortcut: "/icon.png",
     apple: "/apple-touch-icon.png",
   },
 }
