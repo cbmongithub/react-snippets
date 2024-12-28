@@ -1,20 +1,66 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
-import { Header } from './header';
+import Header from './header';
+import { METADATA } from '@/data/metadata';
+import { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata = {
-  title: 'ui-snippets - Dark Mode Components',
-  description:
-    'Crafted with Tailwind and React',
-};
+export const metadata: Metadata = {
+  title: {
+    default: METADATA.name,
+    template: `%s - ${METADATA.name}`,
+  },
+  metadataBase: new URL(METADATA.url),
+  description: METADATA.description,
+  keywords: [
+    "Next.js v15",
+    "Next.js 15 template",
+    "Tailwind CSS v4",
+    "Tailwind v4 template",
+  ],
+  authors: [
+    {
+      name: METADATA.name,
+      url: METADATA.url,
+    },
+  ],
+  creator: METADATA.name,
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: METADATA.url,
+    title: METADATA.name,
+    description: METADATA.description,
+    siteName: METADATA.name,
+    images: [
+      {
+        url: METADATA.ogImage,
+        width: 1200,
+        height: 630,
+        alt: METADATA.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: METADATA.name,
+    description: METADATA.description,
+    images: [METADATA.ogImage],
+    creator: METADATA.handles.twitter,
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/icon",
+    apple: "/apple-touch-icon.png",
+  },
+}
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: {
   children: React.ReactNode;
-  }) {
+  }) => {
   return (
     <html lang='en'>
       <body
@@ -55,3 +101,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export default RootLayout;

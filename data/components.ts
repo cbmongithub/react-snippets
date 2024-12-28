@@ -1,25 +1,26 @@
-import TextAnimatedGradient from '@/components/lab/text/TextAnimatedGradient';
-import TextGradient from '@/components/lab/text/TextGradient';
-import TextShine from '@/components/lab/text/TextShine';
-import ButtonBackgroundShine from '@/components/lab/button/ButtonBackgroundShine';
-import ButtonGradient from '@/components/lab/button/ButtonGradient';
-import ButtonHoverGradient from '@/components/lab/button/ButtonHoverGradient';
-import ButtonBackgroundSpotlight from '@/components/lab/button/ButtonBackgroundSpotlight';
-import ButtonRotatingBackgroundGradient from '@/components/lab/button/ButtonRotatingBackgroundGradient';
-import ButtonShadowGradient from '@/components/lab/button/ButtonShadowGradient';
-import ButtonRipple from '@/components/lab/button/ButtonRipple';
-import ButtonToggle from '@/components/lab/button/ButtonToggle';
-import InputGradientBorder from '@/components/lab/input/InputGradientBorder';
-import InputSpotlightBorder from '@/components/lab/input/InputSpotlightBorder';
-import InputPulseBorder from '@/components/lab/input/InputPulseBorder';
-import BadgeAnimatedGradientBorder from '@/components/lab/badge/BadgeAnimatedGradientBorder';
-import BadgeShine from '@/components/lab/badge/BadgeShine';
-import BadgeTextGradient from '@/components/lab/badge/BadgeTextGradient';
-import CardAnimatedBorderGradient from '@/components/lab/card/CardAnimatedBorderGradient';
-import CardSpotlightImage from '@/components/lab/card/CardSpotlightImage';
-import CardSpotlight from '@/components/lab/card/CardSpotlight';
-import CardPulseBorder from '@/components/lab/card/CardPulseBorder';
-import CardTilt from '@/components/lab/card/CardTilt';
+import BadgeAnimatedGradientBorder from '@/components/lab/badge/BadgeAnimatedGradientBorder'
+import BadgeShine from '@/components/lab/badge/BadgeShine'
+import BadgeTextGradient from '@/components/lab/badge/BadgeTextGradient'
+import ButtonBackgroundShine from '@/components/lab/button/ButtonBackgroundShine'
+import ButtonBackgroundSpotlight from '@/components/lab/button/ButtonBackgroundSpotlight'
+import ButtonGradient from '@/components/lab/button/ButtonGradient'
+import ButtonHoverGradient from '@/components/lab/button/ButtonHoverGradient'
+import ButtonRipple from '@/components/lab/button/ButtonRipple'
+import ButtonRotatingBackgroundGradient from '@/components/lab/button/ButtonRotatingBackgroundGradient'
+import ButtonShadowGradient from '@/components/lab/button/ButtonShadowGradient'
+import ButtonSlideLeft from '@/components/lab/button/ButtonSlideLeft'
+import ButtonToggle from '@/components/lab/button/ButtonToggle'
+import CardAnimatedBorderGradient from '@/components/lab/card/CardAnimatedBorderGradient'
+import CardPulseBorder from '@/components/lab/card/CardPulseBorder'
+import CardSpotlight from '@/components/lab/card/CardSpotlight'
+import CardSpotlightImage from '@/components/lab/card/CardSpotlightImage'
+import CardTilt from '@/components/lab/card/CardTilt'
+import InputGradientBorder from '@/components/lab/input/InputGradientBorder'
+import InputPulseBorder from '@/components/lab/input/InputPulseBorder'
+import InputSpotlightBorder from '@/components/lab/input/InputSpotlightBorder'
+import TextAnimatedGradient from '@/components/lab/text/TextAnimatedGradient'
+import TextGradient from '@/components/lab/text/TextGradient'
+import TextShine from '@/components/lab/text/TextShine'
 
 const CSS = {
   ['text-gradient']: `
@@ -71,17 +72,18 @@ const CSS = {
   }
 }
 `,
-};
+}
 
 export type ComponentsProps = {
-  name: string;
-  component: React.FC;
-  slug: string;
-  type: string;
-  css?: string;
-};
+  name: string
+  component: React.FC
+  slug: string
+  type: string
+  css?: string
+  categories: string[]
+}[]
 
-export const COMPONENTS = [
+export const COMPONENTS: ComponentsProps = [
   {
     name: 'Badge Animated Gradient Border',
     component: BadgeAnimatedGradientBorder,
@@ -151,6 +153,13 @@ export const COMPONENTS = [
     name: 'Button Shadow Gradient',
     component: ButtonShadowGradient,
     slug: 'button-shadow-gradient',
+    type: 'button',
+    categories: ['Buttons', 'All'],
+  },
+  {
+    name: 'Button Slide Left',
+    component: ButtonSlideLeft,
+    slug: 'button-slide-left',
     type: 'button',
     categories: ['Buttons', 'All'],
   },
@@ -243,4 +252,4 @@ export const COMPONENTS = [
     css: CSS['background-shine'],
     categories: ['Text', 'All'],
   },
-];
+]

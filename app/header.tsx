@@ -3,7 +3,7 @@ import { GitHubLogoIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export const Header = () => {
+const Header = () => {
   const pathname = usePathname();
   const isRoot = pathname === '/';
 
@@ -31,3 +31,5 @@ export const Header = () => {
     </>
   );
 };
+
+export default Header;
