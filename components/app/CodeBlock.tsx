@@ -1,5 +1,5 @@
 import { Code } from 'bright';
-import CopyCode from './CopyCode';
+import CopyButton from './CopyButton';
 
 import githubDark from '@/lib/theme.json';
 
@@ -20,7 +20,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ code, lang, title }) => {
         </div>
       ) : null}
       <div className='absolute right-4 top-4 z-10'>
-        <CopyCode code={code} />
+        <CopyButton code={code} />
       </div>
       <div className='relative overflow-x-auto pt-10'>
         <Code code={code} lang={lang} />
