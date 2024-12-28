@@ -4,7 +4,7 @@ import path from 'node:path';
 import CodeBlock from '@/components/app/CodeBlock';
 import { COMPONENTS } from '@/data/components';
 import ComponentPlayground from '@/components/app/ComponentPlayground';
-import { BackButton } from '@/components/app/BackButton';
+import BackButton from '@/components/app/BackButton';
 
 async function readFilePath(filePath: string) {
   const readFile = promisify(fs.readFile);
@@ -17,11 +17,9 @@ async function readFilePath(filePath: string) {
 }
 
 export async function generateStaticParams() {
-  const componentSlugs = COMPONENTS.map((component) => ({
-    slug: component.slug,
+  return COMPONENTS.map(({ slug }) => ({
+    slug: slug,
   }));
-
-  return componentSlugs;
 }
 
 export const dynamicParams = false;
@@ -34,36 +32,36 @@ const ComponentPage = async ({
   params: Promise<{ slug: string }>;
 }) => {
   const param = await params;
-  const currentComponentData = COMPONENTS.find(
-    (component) => component.slug === param.slug,
+  const comp = COMPONENTS.find(
+    ({ slug }) => slug === param.slug,
   );
 
-  if (!currentComponentData) {
+  if (!comp) {
     return <div>Component not found</div>;
   }
 
   const filePath = `./components/lab/${
-    currentComponentData?.type
-  }/${currentComponentData?.name.replace(/\s+/g, '')}.tsx`;
+    comp?.type
+    }/${comp?.name.replace(/\s+/g, '')}.tsx`;
 
   const code = await readFilePath(filePath);
-  const css = JSON.stringify(currentComponentData?.css, null, 2);
+  const css = JSON.stringify(comp?.css, null, 2);
   return (
     <div className='mt-10 pb-16 space-y-8'>
       <div className='flex flex-row justify-between items-center'>
         <BackButton />
         <h1 className='text-md font-light text-neutral-400'>
-        {currentComponentData.name}
+          {comp.name}
       </h1>
       </div>
       <div className='w-full'>
         <ComponentPlayground isCentered>
-          <currentComponentData.component />
+          <comp.component />
         </ComponentPlayground>
         <div className='mt-8'>
           <CodeBlock code={code} lang='tsx' />
         </div>
-        {css ? (
+        {css && (
           <div className='mt-8'>
             <CodeBlock
               code={JSON.parse(css)}
@@ -71,7 +69,7 @@ const ComponentPage = async ({
               title='globals.css'
             />
           </div>
-        ) : ""}
+        )}
       </div>
     </div>
   );

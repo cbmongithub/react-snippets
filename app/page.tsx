@@ -1,6 +1,6 @@
-import TabsFilter from '@/components/app/TabsFilter';
+import ComponentFilter from '@/components/app/ComponentFilter';
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <section>
@@ -16,8 +16,10 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <TabsFilter />
+        <ComponentFilter />
       </section>
     </>
   );
-}
+};
+
+export default Home;

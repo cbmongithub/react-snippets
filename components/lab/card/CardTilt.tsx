@@ -1,5 +1,5 @@
 'use client';
-import { useState, MouseEvent, useCallback } from 'react';
+import { useState, type MouseEvent, useCallback } from 'react';
 
 function throttle<T extends (...args: any[]) => any>(
   func: T,

@@ -1,7 +1,7 @@
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
-export const BackButton = () => {
+const BackButton = () => {
     return (
         <Link href='/'>
             <button
@@ -14,3 +14,5 @@ export const BackButton = () => {
         </Link>
     );
 }
+
+export default BackButton;
