@@ -13,7 +13,7 @@ const ComponentTabs = ({ tabs, activeTab, setActiveTab }: ComponentTabsProps) =>
                     type="button"
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`cursor-pointer px-3 py-2 ${activeTab === tab ? 'text-blue-500' : 'text-neutral-400'}`}
+                    className={`cursor-pointer hover:bg-neutral-800 px-3 py-2 ${activeTab === tab ? 'text-blue-500' : 'text-neutral-400'}`}
                 >
                     {tab}
                 </button>
