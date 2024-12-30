@@ -1,6 +1,5 @@
 import { Code } from 'bright';
 import CopyButton from './CopyButton';
-
 import githubDark from '@/lib/theme.json';
 
 type CodeBlockProps = {
