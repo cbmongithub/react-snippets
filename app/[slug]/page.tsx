@@ -47,7 +47,7 @@ const ComponentPage = async ({
   const code = await readFilePath(filePath);
   const css = JSON.stringify(comp?.css, null, 2);
   return (
-    <div className='space-y-16 px-6'>
+    <div className='p-6 space-y-6 min-h-screen'>
       <div className='flex flex-row justify-between items-center'>
         <BackButton />
         <h1 className='text-md font-light text-neutral-400'>
@@ -58,11 +58,11 @@ const ComponentPage = async ({
         <ComponentPlayground isCentered>
           <comp.component />
         </ComponentPlayground>
-        <div className='mt-8'>
+        <div className='mt-6'>
           <CodeBlock code={code} lang='tsx' />
         </div>
         {css && (
-          <div className='mt-8'>
+          <div className='mt-6'>
             <CodeBlock
               code={JSON.parse(css)}
               lang='css'

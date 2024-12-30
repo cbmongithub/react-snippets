@@ -1,25 +1,27 @@
-import BadgeAnimatedGradientBorder from '@/components/lab/badge/BadgeAnimatedGradientBorder';
-import BadgeShine from '@/components/lab/badge/BadgeShine';
-import BadgeTextGradient from '@/components/lab/badge/BadgeTextGradient';
-import ButtonBackgroundShine from '@/components/lab/button/ButtonBackgroundShine';
-import ButtonBackgroundSpotlight from '@/components/lab/button/ButtonBackgroundSpotlight';
-import ButtonGradient from '@/components/lab/button/ButtonGradient';
-import ButtonHoverGradient from '@/components/lab/button/ButtonHoverGradient';
-import ButtonRipple from '@/components/lab/button/ButtonRipple';
-import ButtonRotatingBackgroundGradient from '@/components/lab/button/ButtonRotatingBackgroundGradient';
-import ButtonShadowGradient from '@/components/lab/button/ButtonShadowGradient';
-import ButtonSlideLeft from '@/components/lab/button/ButtonSlideLeft';
-import ButtonToggle from '@/components/lab/button/ButtonToggle';
-import CardAnimatedBorderGradient from '@/components/lab/card/CardAnimatedBorderGradient';
-import CardPulseBorder from '@/components/lab/card/CardPulseBorder';
-import CardSpotlight from '@/components/lab/card/CardSpotlight';
-import CardSpotlightImage from '@/components/lab/card/CardSpotlightImage';
-import CardTilt from '@/components/lab/card/CardTilt';
-import InputGradientBorder from '@/components/lab/input/InputGradientBorder';
-import InputPulseBorder from '@/components/lab/input/InputPulseBorder';
-import InputSpotlightBorder from '@/components/lab/input/InputSpotlightBorder';
-import TextAnimatedGradient from '@/components/lab/text/TextAnimatedGradient';
-import TextGradient from '@/components/lab/text/TextGradient';
+import { cache } from 'react'
+
+import BadgeAnimatedGradientBorder from '@/components/lab/badge/BadgeAnimatedGradientBorder'
+import BadgeShine from '@/components/lab/badge/BadgeShine'
+import BadgeTextGradient from '@/components/lab/badge/BadgeTextGradient'
+import ButtonBackgroundShine from '@/components/lab/button/ButtonBackgroundShine'
+import ButtonBackgroundSpotlight from '@/components/lab/button/ButtonBackgroundSpotlight'
+import ButtonGradient from '@/components/lab/button/ButtonGradient'
+import ButtonHoverGradient from '@/components/lab/button/ButtonHoverGradient'
+import ButtonRipple from '@/components/lab/button/ButtonRipple'
+import ButtonRotatingBackgroundGradient from '@/components/lab/button/ButtonRotatingBackgroundGradient'
+import ButtonShadowGradient from '@/components/lab/button/ButtonShadowGradient'
+import ButtonSlideLeft from '@/components/lab/button/ButtonSlideLeft'
+import ButtonToggle from '@/components/lab/button/ButtonToggle'
+import CardAnimatedBorderGradient from '@/components/lab/card/CardAnimatedBorderGradient'
+import CardPulseBorder from '@/components/lab/card/CardPulseBorder'
+import CardSpotlight from '@/components/lab/card/CardSpotlight'
+import CardSpotlightImage from '@/components/lab/card/CardSpotlightImage'
+import CardTilt from '@/components/lab/card/CardTilt'
+import InputGradientBorder from '@/components/lab/input/InputGradientBorder'
+import InputPulseBorder from '@/components/lab/input/InputPulseBorder'
+import InputSpotlightBorder from '@/components/lab/input/InputSpotlightBorder'
+import TextAnimatedGradient from '@/components/lab/text/TextAnimatedGradient'
+import TextGradient from '@/components/lab/text/TextGradient'
 import TextShine from '@/components/lab/text/TextShine'
 
 const CSS = {
@@ -253,3 +255,5 @@ export const COMPONENTS: ComponentsProps = [
     categories: ['Text', 'All'],
   },
 ]
+
+export default cache(() => COMPONENTS)

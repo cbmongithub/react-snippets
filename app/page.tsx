@@ -6,10 +6,10 @@ const Home = () => {
       <section>
         <div className='py-16 px-6'>
           <h1 className='mb-8 font-semibold text-neutral-100 text-4xl md:text-5xl'>
-              Dark mode components
+            Components
             </h1>
           <p className='text-neutral-300'>
-            A collection of dark mode components built with Tailwind CSS and React.
+            Copy and paste into your apps
           </p>
         </div>
       </section>
