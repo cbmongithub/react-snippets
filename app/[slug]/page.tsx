@@ -47,7 +47,7 @@ const ComponentPage = async ({
   const code = await readFilePath(filePath);
   const css = JSON.stringify(comp?.css, null, 2);
   return (
-    <div className='mt-10 pb-16 space-y-8'>
+    <div className='space-y-16 px-6'>
       <div className='flex flex-row justify-between items-center'>
         <BackButton />
         <h1 className='text-md font-light text-neutral-400'>

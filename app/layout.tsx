@@ -1,8 +1,9 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
-import Header from './header';
+import Header from '@/components/app/Header';
 import { METADATA } from '@/data/metadata';
 import type { Metadata } from 'next';
+import { Footer } from '@/components/app/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -62,40 +63,16 @@ const RootLayout = ({
   children: React.ReactNode;
   }) => {
   return (
-    <html lang='en'>
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} bg-black`}
-        suppressHydrationWarning={true}
+        className={`${inter.className} overflow-x-hidden bg-black font-sans text-sm text-neutral-50 min-h-screen antialiased`}
       >
-        <div className='relative min-h-screen p-6'>
+        <div
+          className="relative mx-auto flex min-h-[100dvh] flex-col justify-between max-w-5xl border border-x-neutral-900 border-y-0"
+        >
           <Header />
-          <main className='container mx-auto flex max-w-5xl flex-1 flex-col px-4'>
-            {children}
-          </main>
-          <footer>
-            <div className='flex items-center justify-center py-8'>
-              <span className='text-sm text-neutral-400'>
-                By
-                <a
-                  href='https://twitter.com/Ibelick'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='ml-1 text-neutral-50'
-                >
-                  @Ibelick
-                </a>
-                &nbsp;and
-                <a
-                  href='https://twitter.com/cbmonx'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='ml-1 text-neutral-50'
-                >
-                  @cbmonx
-                </a>
-              </span>
-            </div>
-          </footer>
+          {children}
+          <Footer />
         </div>
       </body>
     </html>

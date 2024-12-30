@@ -22,7 +22,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ code, lang, title }) => {
       <div className='absolute right-4 top-4 z-10'>
         <CopyButton code={code} />
       </div>
-      <div className='relative overflow-x-auto pt-10'>
+      <div className='relative overflow-x-auto pt-0 mb-[-10px] px-6'>
         <Code code={code} lang={lang} />
       </div>
     </div>
