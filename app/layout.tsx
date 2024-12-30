@@ -65,15 +65,14 @@ const RootLayout = ({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} overflow-x-hidden bg-black font-sans text-sm text-neutral-50 min-h-screen antialiased`}
+        className={`${inter.className} bg-black font-sans text-sm text-neutral-50 antialiased max-w-5xl mx-auto border border-x-neutral-900 border-y-0`}
       >
-        <div
-          className="relative mx-auto flex min-h-[100dvh] flex-col justify-between max-w-5xl border border-x-neutral-900 border-y-0"
+        <main
         >
           <Header />
           {children}
           <Footer />
-        </div>
+        </main>
       </body>
     </html>
   );
