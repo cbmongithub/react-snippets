@@ -21,7 +21,7 @@ const CopyButton: React.FC<CopyButtonProps> = ({ code }) => {
   return (
     <button
       type='button'
-      className='cursor-pointer rounded-md border border-neutral-900 p-2 transition hover:bg-neutral-900'
+      className='cursor-pointer rounded-md border border-neutral-900 p-2 transition hover:bg-neutral-900 bg-black'
       onClick={onCopy}
     >
       {hasCheckIcon ? (
