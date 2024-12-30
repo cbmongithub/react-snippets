@@ -12,7 +12,7 @@ const ComponentTabs = ({ tabs, activeTab, setActiveTab }: ComponentTabsProps) =>
             {tabs.map((tab: string) => (
                 <motion.button
                     type="button"
-                    className="cursor-pointer text-sm px-3 py-2 rounded-md bg-neutral-800"
+                    className="cursor-pointer text-sm px-3 py-2"
                     key={tab}
                     onClick={() => setActiveTab(tab)}
                     initial={false}
