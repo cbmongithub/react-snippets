@@ -13,7 +13,7 @@ Code.theme = githubDark as unknown as Record<string, string>;
 
 const CodeBlock: React.FC<CodeBlockProps> = ({ code, lang, title }) => {
   return (
-    <div className='relative rounded-md border border-neutral-900'>
+    <div className='relative border border-neutral-900'>
       {title && (
         <div className='absolute left-4 top-4'>
           <span className='text-sm text-neutral-400'>{title}</span>
