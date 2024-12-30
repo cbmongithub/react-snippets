@@ -7,7 +7,7 @@ type CardProps = {
     name: string;
 };
 
-const Card: React.FC<CardProps> = ({
+export const Card: React.FC<CardProps> = ({
     children,
     slug,
     name,
@@ -27,5 +27,3 @@ const Card: React.FC<CardProps> = ({
         </div>
     );
 };
-
-export default Card;

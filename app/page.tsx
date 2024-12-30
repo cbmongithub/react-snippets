@@ -1,6 +1,5 @@
 import ComponentFilter from '@/components/app/ComponentFilter';
 import { FlipWords } from '@/components/app/FlipWords';
-
 const Home = () => {
   return (
     <>
