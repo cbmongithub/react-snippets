@@ -1,4 +1,5 @@
 import ComponentFilter from '@/components/app/ComponentFilter';
+import { FlipWords } from '@/components/app/FlipWords';
 
 const Home = () => {
   return (
@@ -6,7 +7,7 @@ const Home = () => {
       <section>
         <div className='py-16 px-6'>
           <h1 className='mb-8 font-semibold text-neutral-100 text-4xl md:text-5xl'>
-            Components
+            React <FlipWords words={['Snippets', 'Badges', 'Buttons', 'Cards', 'Texts', 'Inputs']} />
             </h1>
           <p className='text-neutral-300'>
             Copy and paste into your apps
