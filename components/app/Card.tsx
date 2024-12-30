@@ -13,7 +13,8 @@ const Card: React.FC<CardProps> = ({
     name,
 }) => {
     return (
-        <div className='relative flex items-center justify-center rounded-xl border border-neutral-900 bg-black px-8 py-32'>
+        <Link href={`/${slug}`}>
+            <div className='relative flex items-center justify-center border border-neutral-900 hover:border-neutral-800 bg-black px-8 py-32'>
             <Link
                 href={`/${slug}`}
                 className='absolute left-5 top-4 text-sm text-white'
@@ -27,6 +28,7 @@ const Card: React.FC<CardProps> = ({
             </div>
             <div className='z-0'>{children}</div>
         </div>
+        </Link>
     );
 };
 
