@@ -21,6 +21,7 @@ const ComponentTabs = ({ tabs, activeTab, setActiveTab }: ComponentTabsProps) =>
                         color: activeTab === tab ? 'white' : 'var(--color-neutral-400)',
                     }}
                     whileTap={{ scale: 1.08 }}
+                    whileHover={{ scale: 1.08, color: 'white' }}
                 >
                     {tab}
                 </motion.button>
