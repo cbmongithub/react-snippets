@@ -1,7 +1,6 @@
 import { GitHubLogoIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import { ReactSnippetsLogo, XLogoIcon } from './Icons';
-import { Menu } from './Menu';
 
 export const Header = () => {
     return (
@@ -26,7 +25,6 @@ export const Header = () => {
                 >
                     <GitHubLogoIcon className='size-6 text-neutral-50 transition-colors hover:text-neutral-400' />
                 </Link>
-                <Menu />
             </nav>
         </header>
     );

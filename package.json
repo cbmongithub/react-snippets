@@ -22,8 +22,8 @@
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
     "@tailwindcss/postcss": "^4.0.0-beta.8",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.0",
     "bright": "^0.8.6",
     "postcss": "^8.4.49",
     "prettier": "^3.4.2",

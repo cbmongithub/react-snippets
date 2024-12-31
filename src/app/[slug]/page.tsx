@@ -1,10 +1,10 @@
 import { promisify } from 'node:util';
 import fs from 'node:fs';
 import path from 'node:path';
-import CodeBlock from '@/components/app/CodeBlock';
+import CodeBlock from '@/components/CodeBlock';
 import { COMPONENTS } from '@/data/components';
-import ComponentPlayground from '@/components/app/ComponentPlayground';
-import BackButton from '@/components/app/BackButton';
+import ComponentPlayground from '@/components/ComponentPlayground';
+import BackButton from '@/components/BackButton';
 
 async function readFilePath(filePath: string) {
   const readFile = promisify(fs.readFile);
@@ -24,8 +24,6 @@ export async function generateStaticParams() {
 
 export const dynamicParams = false;
 
-// https://stackoverflow.com/questions/79124951/type-error-in-next-js-route-type-params-id-string-does-not-satis
-
 const ComponentPage = async ({
   params,
 }: {
@@ -40,9 +38,10 @@ const ComponentPage = async ({
     return <div>Component not found</div>;
   }
 
-  const filePath = `./components/lab/${
-    comp?.type
+  const filePath = `components/${comp?.type
     }/${comp?.name.replace(/\s+/g, '')}.tsx`;
+
+  console.log(filePath);
 
   const code = await readFilePath(filePath);
   const css = JSON.stringify(comp?.css, null, 2);
@@ -52,7 +51,7 @@ const ComponentPage = async ({
         <BackButton />
         <h1 className='text-md font-light text-neutral-400'>
           {comp.name}
-      </h1>
+        </h1>
       </div>
       <div className='w-full'>
         <ComponentPlayground isCentered>
