@@ -1,35 +1,30 @@
 "use client";
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-
+import { useState } from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
     svgPathOpen,
     svgPathClose,
     ulVariants,
     liVariants,
 } from '../../data/variants';
-import { COMPONENTS } from '@/data/components';
-
-const useLoaded = () => {
-    const [loaded, setLoaded] = useState(false)
-    useEffect(() => setLoaded(true), [])
-    return loaded
-}
+import { CATEGORIES, COMPONENTS } from '@/data/components';
+import { useLoaded } from '@/hooks';
 
 export const Menu = () => {
-    const [nav, setNav] = useState(false)
-    const [animation, setAnimation] = useState('closed')
-    const loaded = useLoaded()
+    const [nav, setNav] = useState(false);
+    const [animation, setAnimation] = useState('closed');
+    const loaded = useLoaded();
 
     const handleNav = () => {
-        setNav(!nav)
-        setAnimation('moving')
+        setNav(!nav);
+        setAnimation('moving');
+        document.body.style.overflow = nav ? 'auto' : 'hidden';
         setTimeout(() => {
-            setAnimation(animation === 'closed' ? 'open' : 'closed')
-        }, 750)
-    }
+            setAnimation(animation === 'closed' ? 'open' : 'closed');
+        }, 750);
+    };
 
     return loaded && (
         <>
@@ -56,31 +51,41 @@ export const Menu = () => {
                     />
                 </svg>
             </button>
-            <motion.ul
+            <motion.div
                 className={
                     nav
-                        ? 'absolute  bg-black right-0 top-0 mt-18 z-40 flex min-h-screen w-full flex-col items-center justify-center duration-1000 text-sm ease-in-out'
-                        : 'absolute  bg-black right-[-100%] top-0 mt-18 z-40 flex min-h-screen w-full flex-col items-center justify-center  duration-1000 text-sm ease-in-out'
+                        ? 'fixed border border-x-neutral-900 w-full h-screen border-y-0 bg-black right-0 top-0 mt-18 z-40 flex flex-col duration-1000 text-sm ease-in-out'
+                        : 'fixed border border-x-neutral-900 w-full h-screen border-y-0 bg-black right-[-100%] top-0 mt-18 z-40 flex flex-col duration-1000 text-sm ease-in-out'
                 }
                 variants={ulVariants}
                 animate={nav ? 'open' : 'closed'}>
-                {COMPONENTS.map((component) => (
-                    <motion.li
-                        className='flex flex-col items-center justify-center w-full'
-                        key={component.slug}
+                {CATEGORIES.map((category) => (
+                    <motion.div
+                        key={category}
                         variants={liVariants}
                         whileTap={{ scale: 1.00 }}
                         whileHover={{ scale: 1.03 }}>
-                        <Link
-                            className='text-lg bg-black pb-0.5 font-light text-neutral-50 transition duration-300 ease-in-out hover:text-blue-600'
-                            href={component.slug}
-                            role='component'
-                            onClick={handleNav}
-                            aria-label={`${component.name} Component Link`}>
-                            {component.name}
-                        </Link>
-                    </motion.li>
+                        <motion.details className='w-full'>
+                            <motion.summary className='text-lg bg-black pb-0.5 font-light text-neutral-50 transition duration-300 ease-in-out hover:text-blue-600 cursor-pointer'>
+                                {category}
+                            </motion.summary>
+                            <motion.ul className='w-full'>
+                                {COMPONENTS.filter(component => component.categories.includes(category))?.map((component) => (
+                                    <motion.li key={component.name} className='w-full'>
+                                        <Link href={`/${component.slug}`}>
+                                            <p className='w-full text-neutral-50 hover:text-blue-600 transition duration-300 ease-in-out'>
+                                                {component.name}
+                                            </p>
+                                        </Link>
+                                    </motion.li>
+                                ))}
+                            </motion.ul>
+                        </motion.details>
+                    </motion.div>
                 ))}
-            </motion.ul>
-        </>)
+            </motion.div>
+        </>
+    );
 };
+
+
