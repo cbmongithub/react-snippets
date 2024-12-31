@@ -59,8 +59,8 @@ export const Menu = () => {
             <motion.ul
                 className={
                     nav
-                        ? 'absolute bg-black right-0 top-0 z-40 flex min-h-screen w-full flex-col items-center justify-center duration-1000 text-sm ease-in-out'
-                        : 'absolute bg-black right-[-100%] top-0 z-40 flex min-h-screen w-full flex-col items-center justify-center  duration-1000 text-sm ease-in-out'
+                        ? 'absolute  bg-black right-0 top-0 mt-18 z-40 flex min-h-screen w-full flex-col items-center justify-center duration-1000 text-sm ease-in-out'
+                        : 'absolute  bg-black right-[-100%] top-0 mt-18 z-40 flex min-h-screen w-full flex-col items-center justify-center  duration-1000 text-sm ease-in-out'
                 }
                 variants={ulVariants}
                 animate={nav ? 'open' : 'closed'}>
@@ -72,7 +72,7 @@ export const Menu = () => {
                         whileTap={{ scale: 1.00 }}
                         whileHover={{ scale: 1.03 }}>
                         <Link
-                            className='text-xl bg-black pb-0.5 font-light text-neutral-50 transition duration-300 ease-in-out hover:text-blue-600'
+                            className='text-lg bg-black pb-0.5 font-light text-neutral-50 transition duration-300 ease-in-out hover:text-blue-600'
                             href={component.slug}
                             role='component'
                             onClick={handleNav}

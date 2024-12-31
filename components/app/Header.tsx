@@ -5,7 +5,7 @@ import { Menu } from './Menu';
 
 export const Header = () => {
     return (
-        <header className='flex px-6 items-center justify-between py-8 border border-b-neutral-900 border-t-0 border-x-0'>
+        <header className='flex p-6 h-18 items-center justify-between border border-b-neutral-900 border-t-0 border-x-0'>
             <Link href='/'>
                 <ReactSnippetsLogo className='h-6 w-auto' />
             </Link>

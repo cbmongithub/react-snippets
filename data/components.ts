@@ -1,5 +1,3 @@
-import { cache } from 'react'
-
 import BadgeAnimatedGradientBorder from '@/components/lab/badge/BadgeAnimatedGradientBorder'
 import BadgeShine from '@/components/lab/badge/BadgeShine'
 import BadgeTextGradient from '@/components/lab/badge/BadgeTextGradient'
@@ -247,5 +245,3 @@ export const COMPONENTS: ComponentsProps = [
     categories: ['Text', 'All'],
   },
 ]
-
-export default cache(() => COMPONENTS)
