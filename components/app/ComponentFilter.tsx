@@ -14,7 +14,7 @@ const ComponentFilter = () => {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.1,
+                staggerChildren: 0.3,
             },
         },
     };
@@ -29,7 +29,6 @@ const ComponentFilter = () => {
             <ComponentTabs tabs={['All', 'Badges', 'Buttons', 'Cards', 'Inputs', 'Text']} activeTab={activeTab} setActiveTab={setActiveTab} />
             <div className='min-h-screen w-full p-6 border border-y-neutral-900 border-x-0'>
                 <motion.div
-                    key={activeTab}
                     className='grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3'
                     variants={containerVariants}
                     initial="hidden"

@@ -1,20 +1,18 @@
-import { cache } from 'react';
+import { cache } from 'react'
 
-
-
-import BadgeAnimatedGradientBorder from '@/components/lab/badge/BadgeAnimatedGradientBorder';
-import BadgeShine from '@/components/lab/badge/BadgeShine';
-import BadgeTextGradient from '@/components/lab/badge/BadgeTextGradient';
-import ButtonBackgroundShine from '@/components/lab/button/ButtonBackgroundShine';
-import ButtonBackgroundSpotlight from '@/components/lab/button/ButtonBackgroundSpotlight';
-import ButtonGradient from '@/components/lab/button/ButtonGradient';
-import ButtonHoverGradient from '@/components/lab/button/ButtonHoverGradient';
-import ButtonRipple from '@/components/lab/button/ButtonRipple';
-import ButtonRotatingBackgroundGradient from '@/components/lab/button/ButtonRotatingBackgroundGradient';
-import ButtonShadowGradient from '@/components/lab/button/ButtonShadowGradient';
-import ButtonSlideLeft from '@/components/lab/button/ButtonSlideLeft';
-import ButtonToggle from '@/components/lab/button/ButtonToggle';
-import CardAnimatedBorderGradient from '@/components/lab/card/CardAnimatedBorderGradient';
+import BadgeAnimatedGradientBorder from '@/components/lab/badge/BadgeAnimatedGradientBorder'
+import BadgeShine from '@/components/lab/badge/BadgeShine'
+import BadgeTextGradient from '@/components/lab/badge/BadgeTextGradient'
+import ButtonBackgroundShine from '@/components/lab/button/ButtonBackgroundShine'
+import ButtonBackgroundSpotlight from '@/components/lab/button/ButtonBackgroundSpotlight'
+import ButtonGradient from '@/components/lab/button/ButtonGradient'
+import ButtonHoverGradient from '@/components/lab/button/ButtonHoverGradient'
+import ButtonRipple from '@/components/lab/button/ButtonRipple'
+import ButtonRotatingBackgroundGradient from '@/components/lab/button/ButtonRotatingBackgroundGradient'
+import ButtonShadowGradient from '@/components/lab/button/ButtonShadowGradient'
+import ButtonSlideLeft from '@/components/lab/button/ButtonSlideLeft'
+import ButtonToggle from '@/components/lab/button/ButtonToggle'
+import CardAnimatedBorderGradient from '@/components/lab/card/CardAnimatedBorderGradient'
 import CardPulseBorder from '@/components/lab/card/CardPulseBorder'
 import CardSpotlight from '@/components/lab/card/CardSpotlight'
 import CardTilt from '@/components/lab/card/CardTilt'
