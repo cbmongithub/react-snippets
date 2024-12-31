@@ -1,9 +1,10 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
-import Header from '@/components/app/Header';
-import { METADATA } from '@/data/metadata';
+
 import type { Metadata } from 'next';
-import { Footer } from '@/components/app/Footer';
+import { Inter } from 'next/font/google';
+import { Header } from '@/components/Header';
+import { METADATA } from '@/data/metadata';
+import { Footer } from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -61,11 +62,11 @@ const RootLayout = ({
   children,
 }: {
   children: React.ReactNode;
-  }) => {
+}) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} bg-black font-sans text-sm text-neutral-50 antialiased max-w-5xl mx-auto border border-x-neutral-900 border-y-0`}
+        className={`${inter.className} bg-black font-sans text-sm text-neutral-50 antialiased max-w-5xl mx-auto border border-x-neutral-900 border-y-0 overflow-x-hidden`}
       >
         <main
         >

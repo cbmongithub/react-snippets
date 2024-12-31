@@ -1,5 +1,6 @@
-import ComponentFilter from '@/components/app/ComponentFilter';
-import { FlipWords } from '@/components/app/FlipWords';
+import ComponentFilter from '@/components/ComponentFilter';
+import { FlipWords } from '@/components/FlipWords';
+
 const Home = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const Home = () => {
         <div className='py-16 px-6'>
           <h1 className='mb-8 font-semibold text-neutral-100 text-4xl md:text-5xl'>
             React<FlipWords words={['Snippets', 'Badges', 'Buttons', 'Cards', 'Texts', 'Inputs']} />
-            </h1>
+          </h1>
           <p className='text-neutral-300'>
             Copy and paste into your apps
           </p>
