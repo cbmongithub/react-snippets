@@ -41,8 +41,6 @@ const ComponentPage = async ({
   const filePath = `components/${comp?.type
     }/${comp?.name.replace(/\s+/g, '')}.tsx`;
 
-  console.log(filePath);
-
   const code = await readFilePath(filePath);
   const css = JSON.stringify(comp?.css, null, 2);
   return (

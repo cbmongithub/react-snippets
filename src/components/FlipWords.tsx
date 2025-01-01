@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-export const FlipWords = ({
+const FlipWords = ({
     words,
     duration = 3000,
     className,
@@ -97,3 +97,5 @@ export const FlipWords = ({
         </AnimatePresence>
     );
 };
+
+export default FlipWords;

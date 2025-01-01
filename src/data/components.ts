@@ -1,26 +1,26 @@
 
-import BadgeAnimatedGradientBorder from '../../components/badge/BadgeAnimatedGradientBorder';
-import BadgeShine from '../../components/badge/BadgeShine'
-import BadgeTextGradient from '../../components/badge/BadgeTextGradient'
-import ButtonBackgroundShine from '../../components/button/ButtonBackgroundShine'
-import ButtonBackgroundSpotlight from '../../components/button/ButtonBackgroundSpotlight'
-import ButtonGradient from '../../components/button/ButtonGradient'
-import ButtonHoverGradient from '../../components/button/ButtonHoverGradient'
-import ButtonRipple from '../../components/button/ButtonRipple'
-import ButtonRotatingBackgroundGradient from '../../components/button/ButtonRotatingBackgroundGradient'
-import ButtonShadowGradient from '../../components/button/ButtonShadowGradient'
-import ButtonSlideLeft from '../../components/button/ButtonSlideLeft'
-import ButtonToggle from '../../components/button/ButtonToggle'
-import CardAnimatedBorderGradient from '../../components/card/CardAnimatedBorderGradient'
-import CardPulseBorder from '../../components/card/CardPulseBorder'
-import CardSpotlight from '../../components/card/CardSpotlight'
-import CardTilt from '../../components/card/CardTilt'
-import InputGradientBorder from '../../components/input/InputGradientBorder'
-import InputPulseBorder from '../../components/input/InputPulseBorder'
-import InputSpotlightBorder from '../../components/input/InputSpotlightBorder'
-import TextAnimatedGradient from '../../components/text/TextAnimatedGradient'
-import TextGradient from '../../components/text/TextGradient'
-import TextShine from '../../components/text/TextShine'
+import BadgeAnimatedGradientBorder from '../../components/badges/BadgeAnimatedGradientBorder';
+import BadgeShine from '../../components/badges/BadgeShine'
+import BadgeTextGradient from '../../components/badges/BadgeTextGradient'
+import ButtonBackgroundShine from '../../components/buttons/ButtonBackgroundShine'
+import ButtonBackgroundSpotlight from '../../components/buttons/ButtonBackgroundSpotlight'
+import ButtonGradient from '../../components/buttons/ButtonGradient'
+import ButtonHoverGradient from '../../components/buttons/ButtonHoverGradient'
+import ButtonRipple from '../../components/buttons/ButtonRipple'
+import ButtonRotatingBackgroundGradient from '../../components/buttons/ButtonRotatingBackgroundGradient'
+import ButtonShadowGradient from '../../components/buttons/ButtonShadowGradient'
+import ButtonSlideLeft from '../../components/buttons/ButtonSlideLeft'
+import ButtonToggle from '../../components/buttons/ButtonToggle'
+import CardAnimatedBorderGradient from '../../components/cards/CardAnimatedBorderGradient'
+import CardPulseBorder from '../../components/cards/CardPulseBorder'
+import CardSpotlight from '../../components/cards/CardSpotlight'
+import CardTilt from '../../components/cards/CardTilt'
+import InputGradientBorder from '../../components/inputs/InputGradientBorder'
+import InputPulseBorder from '../../components/inputs/InputPulseBorder'
+import InputSpotlightBorder from '../../components/inputs/InputSpotlightBorder'
+import TextAnimatedGradient from '../../components/texts/TextAnimatedGradient'
+import TextGradient from '../../components/texts/TextGradient'
+import TextShine from '../../components/texts/TextShine'
 
 const CSS = {
   'text-gradient': `
@@ -88,14 +88,14 @@ export const COMPONENTS: ComponentsProps = [
     name: 'Badge Animated Gradient Border',
     component: BadgeAnimatedGradientBorder,
     slug: 'badge-animated-gradient-border',
-    type: 'badge',
+    type: 'badges',
     categories: ['Badges', 'All'],
   },
   {
     name: 'Badge Shine',
     component: BadgeShine,
     slug: 'badge-shine',
-    type: 'badge',
+    type: 'badges',
     css: CSS['background-shine'],
     categories: ['Badges', 'All'],
   },
@@ -103,14 +103,14 @@ export const COMPONENTS: ComponentsProps = [
     name: 'Badge Text Gradient',
     component: BadgeTextGradient,
     slug: 'badge-text-gradient',
-    type: 'badge',
+    type: 'badges',
     categories: ['Badges', 'All'],
   },
   {
     name: 'Button Background Shine',
     component: ButtonBackgroundShine,
     slug: 'button-background-shine',
-    type: 'button',
+    type: 'buttons',
     css: CSS['background-shine'],
     categories: ['Buttons', 'All'],
   },
@@ -118,56 +118,56 @@ export const COMPONENTS: ComponentsProps = [
     name: 'Button Gradient',
     component: ButtonGradient,
     slug: 'button-gradient',
-    type: 'button',
+    type: 'buttons',
     categories: ['Buttons', 'All'],
   },
   {
     name: 'Button Hover Gradient',
     component: ButtonHoverGradient,
     slug: 'button-hover-gradient',
-    type: 'button',
+    type: 'buttons',
     categories: ['Buttons', 'All'],
   },
   {
     name: 'Button Background Spotlight',
     component: ButtonBackgroundSpotlight,
     slug: 'button-background-spotlight',
-    type: 'button',
+    type: 'buttons',
     categories: ['Buttons', 'All'],
   },
   {
     name: 'Button Rotating Background Gradient',
     component: ButtonRotatingBackgroundGradient,
     slug: 'button-rotating-background-gradient',
-    type: 'button',
+    type: 'buttons',
     categories: ['Buttons', 'All'],
   },
   {
     name: 'Button Ripple',
     component: ButtonRipple,
     slug: 'button-ripple',
-    type: 'button',
+    type: 'buttons',
     categories: ['Buttons', 'All'],
   },
   {
     name: 'Button Shadow Gradient',
     component: ButtonShadowGradient,
     slug: 'button-shadow-gradient',
-    type: 'button',
+    type: 'buttons',
     categories: ['Buttons', 'All'],
   },
   {
     name: 'Button Slide Left',
     component: ButtonSlideLeft,
     slug: 'button-slide-left',
-    type: 'button',
+    type: 'buttons',
     categories: ['Buttons', 'All'],
   },
   {
     name: 'Button Toggle',
     component: ButtonToggle,
     slug: 'button-toggle',
-    type: 'button',
+    type: 'buttons',
     categories: ['Buttons', 'All'],
   },
 
@@ -175,21 +175,21 @@ export const COMPONENTS: ComponentsProps = [
     name: 'Card Animated Border Gradient',
     component: CardAnimatedBorderGradient,
     slug: 'card-animated-border-gradient',
-    type: 'card',
+    type: 'cards',
     categories: ['Cards', 'All'],
   },
   {
     name: 'Card Spotlight',
     component: CardSpotlight,
     slug: 'card-spotlight',
-    type: 'card',
+    type: 'cards',
     categories: ['Cards', 'All'],
   },
   {
     name: 'Card Pulse Border',
     component: CardPulseBorder,
     slug: 'card-pulse-border',
-    type: 'card',
+    type: 'cards',
     css: CSS['border-width'],
     categories: ['Cards', 'All'],
   },
@@ -197,28 +197,28 @@ export const COMPONENTS: ComponentsProps = [
     name: 'Card Tilt',
     component: CardTilt,
     slug: 'card-tilt',
-    type: 'card',
+    type: 'cards',
     categories: ['Cards', 'All'],
   },
   {
     name: 'Input Gradient Border',
     component: InputGradientBorder,
     slug: 'input-gradient-border',
-    type: 'input',
+    type: 'inputs',
     categories: ['Inputs', 'All'],
   },
   {
     name: 'Input Spotlight Border',
     component: InputSpotlightBorder,
     slug: 'input-spotlight-border',
-    type: 'input',
+    type: 'inputs',
     categories: ['Inputs', 'All'],
   },
   {
     name: 'Input Pulse Border',
     component: InputPulseBorder,
     slug: 'input-pulse-border',
-    type: 'input',
+    type: 'inputs',
     css: CSS['border-width'],
     categories: ['Inputs', 'All'],
   },
@@ -226,14 +226,14 @@ export const COMPONENTS: ComponentsProps = [
     name: 'Text Gradient',
     component: TextGradient,
     slug: 'text-gradient',
-    type: 'text',
+    type: 'texts',
     categories: ['Text', 'All'],
   },
   {
     name: 'Text Animated Gradient',
     component: TextAnimatedGradient,
     slug: 'text-animated-gradient',
-    type: 'text',
+    type: 'texts',
     css: CSS['text-gradient'],
     categories: ['Text', 'All'],
   },
@@ -241,7 +241,7 @@ export const COMPONENTS: ComponentsProps = [
     name: 'Text Shine',
     component: TextShine,
     slug: 'text-shine',
-    type: 'text',
+    type: 'texts',
     css: CSS['background-shine'],
     categories: ['Text', 'All'],
   },
