@@ -1,5 +1,5 @@
 import ComponentFilter from '@/components/ComponentFilter';
-import { FlipWords } from '@/components/FlipWords';
+import FlipWords from '@/components/FlipWords';
 
 const Home = () => {
   return (
